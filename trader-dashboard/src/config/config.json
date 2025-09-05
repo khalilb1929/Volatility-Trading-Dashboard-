@@ -1,0 +1,187 @@
+{
+  "application": {
+    "auto_refresh": true,
+    "cache_duration": 300,
+    "cache_enabled": true,
+    "chart_theme": "dark",
+    "data_source": "yahoo",
+    "default_period": "90 days",
+    "default_symbol": "AAPL",
+    "gui_theme": "dark",
+    "log_level": "INFO",
+    "max_data_points": 10000,
+    "ml_model": "random_forest",
+    "refresh_interval": 60,
+    "window_height": 800,
+    "window_width": 1200
+  },
+  "charts": {
+    "dpi": 100,
+    "figure_size": [12, 8],
+    "grid": true,
+    "legend": true,
+    "style": "dark_background",
+    "toolbar": true,
+    "colors": {
+      "background": "#2c3e50",
+      "text": "#ecf0f1",
+      "grid": "#34495e",
+      "price_line": "#3498db",
+      "volatility_line": "#e74c3c",
+      "prediction_line": "#f39c12",
+      "regime_colors": {
+        "low": "#27ae60",
+        "medium": "#f39c12",
+        "high": "#e74c3c",
+        "extreme": "#8e44ad"
+      }
+    },
+    "indicators": {
+      "show_volume": true,
+      "show_ma": true,
+      "ma_periods": [20, 50],
+      "show_bollinger": true,
+      "show_rsi": false,
+      "rsi_period": 14
+    }
+  },
+  "machine_learning": {
+    "cross_validation_folds": 5,
+    "feature_selection": true,
+    "hyperparameter_tuning": false,
+    "model_validation": true,
+    "train_test_split": 0.8,
+    "models": {
+      "random_forest": {
+        "n_estimators": 100,
+        "max_depth": 10,
+        "min_samples_split": 5,
+        "random_state": 42,
+        "n_jobs": -1
+      },
+      "gradient_boost": {
+        "n_estimators": 100,
+        "learning_rate": 0.1,
+        "max_depth": 6,
+        "random_state": 42
+      },
+      "neural_network": {
+        "hidden_layer_sizes": [50, 25, 10],
+        "max_iter": 1000,
+        "learning_rate": "adaptive",
+        "random_state": 42
+      },
+      "linear_regression": {
+        "fit_intercept": true,
+        "normalize": false
+      },
+      "svm": {
+        "kernel": "rbf",
+        "C": 1.0,
+        "gamma": "scale"
+      }
+    },
+    "feature_engineering": {
+      "lookback_periods": [5, 10, 20, 50],
+      "technical_indicators": true,
+      "statistical_features": true,
+      "regime_features": true,
+      "interaction_features": false
+    },
+    "regime_detection": {
+      "method": "kmeans",
+      "auto_regimes": true,
+      "max_regimes": 6,
+      "use_pca": false
+    }
+  },
+  "risk_management": {
+    "alert_on_regime_change": true,
+    "max_drawdown_alert": 0.2,
+    "max_volatility_threshold": 100,
+    "position_size_limit": 1.0,
+    "alerts": {
+      "high_volatility_threshold": 40,
+      "extreme_volatility_threshold": 60,
+      "regime_change_notification": true,
+      "prediction_confidence_threshold": 0.7
+    },
+    "stop_loss": {
+      "enabled": false,
+      "percentage": 0.05,
+      "trailing": false
+    }
+  },
+  "volatility": {
+    "annualization_factor": 252,
+    "method": "close_to_close",
+    "min_periods": 10,
+    "window": 20,
+    "methods_available": [
+      "close_to_close",
+      "garman_klass",
+      "rogers_satchell",
+      "yang_zhang"
+    ],
+    "percentiles": [10, 25, 50, 75, 90],
+    "regimes": {
+      "low_threshold": 15,
+      "medium_threshold": 25,
+      "high_threshold": 40
+    }
+  },
+  "data": {
+    "sources": {
+      "primary": "yahoo",
+      "backup": "alpha_vantage",
+      "custom_csv": false
+    },
+    "cache": {
+      "enabled": true,
+      "directory": "cache",
+      "max_size_mb": 100,
+      "cleanup_interval": 3600
+    },
+    "validation": {
+      "check_missing_data": true,
+      "fill_missing_method": "forward_fill",
+      "outlier_detection": true,
+      "outlier_threshold": 3.0
+    }
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file_logging": true,
+    "log_file": "logs/trader_dashboard.log",
+    "max_file_size_mb": 10,
+    "backup_count": 5
+  },
+  "export": {
+    "default_format": "csv",
+    "include_metadata": true,
+    "date_format": "%Y-%m-%d",
+    "decimal_places": 6,
+    "supported_formats": ["csv", "xlsx", "json", "pickle"]
+  },
+  "notifications": {
+    "enabled": true,
+    "desktop_notifications": false,
+    "email_notifications": false,
+    "email_config": {
+      "smtp_server": "",
+      "smtp_port": 587,
+      "username": "",
+      "password": "",
+      "from_address": "",
+      "to_addresses": []
+    }
+  },
+  "performance": {
+    "parallel_processing": true,
+    "max_workers": 4,
+    "chunk_size": 1000,
+    "memory_limit_mb": 2048,
+    "optimization_level": "balanced"
+  }
+}

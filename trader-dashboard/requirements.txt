@@ -1,0 +1,96 @@
+# Core GUI Framework
+tkinter
+
+# Data Processing and Analysis
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+joblib>=1.0.0
+
+# Financial Data and Technical Analysis
+yfinance>=0.1.70
+ta-lib>=0.4.0
+talib-binary>=0.4.19
+
+# Plotting and Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# HTTP Requests
+requests>=2.25.0
+urllib3>=1.26.0
+
+# Date and Time Processing
+python-dateutil>=2.8.0
+
+# Threading and Async
+threading-timer>=2.0.0
+
+# Data Validation
+validators>=0.18.0
+
+# Configuration Management
+configparser>=5.0.0
+
+# Logging
+logging>=0.4.9.6
+
+# File I/O and Serialization
+pickle-mixin>=1.0.2
+
+# Math and Statistics
+statsmodels>=0.13.0
+
+# Optional: Enhanced plotting
+plotly>=5.0.0
+
+# Optional: Progress bars
+tqdm>=4.62.0
+
+# Optional: Memory profiling
+memory-profiler>=0.60.0
+
+# Development Dependencies (optional)
+pytest>=6.0.0
+pytest-cov>=2.12.0
+black>=21.0.0
+flake8>=3.9.0
+
+# System Dependencies
+psutil>=5.8.0
+
+# Financial calculations
+quantlib>=1.25
+
+# Optional: GUI enhancements
+pillow>=8.3.0
+
+# Optional: Database support
+sqlite3
+
+# Optional: Excel support
+openpyxl>=3.0.7
+xlsxwriter>=3.0.0
+
+# Optional: Web scraping (for additional data sources)
+beautifulsoup4>=4.9.0
+lxml>=4.6.0
+
+# Optional: Caching
+diskcache>=5.2.0
+
+# Optional: Configuration files
+pyyaml>=5.4.0
+toml>=0.10.0
+
+# Optional: Advanced statistics
+arch>=5.0.0
+
+# Optional: Time series analysis
+statsforecast>=1.0.0
+
+# Optional: Portfolio optimization
+cvxpy>=1.1.0

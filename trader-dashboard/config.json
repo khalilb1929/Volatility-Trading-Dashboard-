@@ -1,0 +1,26 @@
+{
+  "alpha_vantage": {
+    "api_key": "YOUR_API_KEY_HERE",
+    "base_url": "https://www.alphavantage.co/query"
+  },
+  "default_settings": {
+    "default_symbol": "AAPL",
+    "default_period": "90 days",
+    "refresh_interval": 300
+  },
+  "ml_settings": {
+    "default_model": "random_forest",
+    "prediction_days": 5,
+    "feature_window": 20
+  },
+  "chart_settings": {
+    "figure_size": [12, 6],
+    "colors": {
+      "current_iv": "blue",
+      "forward_iv": "orange",
+      "mean_line": "blue",
+      "percentile_line": "red",
+      "current_line": "green"
+    }
+  }
+}
